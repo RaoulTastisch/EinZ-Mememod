@@ -1,0 +1,68 @@
+﻿add_namespace = japan
+
+country_event = {
+    id = japan.20
+    title = japan.20.t
+    desc = japan.20.d
+    is_triggered_only = yes
+	
+	option = {
+		name = japan.20.a
+		set_global_flag = the_rice_emporer
+		add_political_power = 100
+		
+		}
+	option = {
+	    name = japan.20.b
+		set_global_flag = share_the_rice
+		set_country_leader_ideology = stalinism
+		
+		set_politics = {
+    parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 60
+		}
+		
+		communism = {
+			popularity = 40
+		}
+		
+		neutrality = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = communism
+}
+	}
+}
+country_event = {
+    id = japan.21
+    title = japan.21.t
+    desc = japan.21.d
+    is_triggered_only = yes
+	
+	option = {
+		name = japan.21.a
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 2
+    category = naval_doctrine
+		
+		}
+		}
+		
+	option = {
+	    name = japan.21.b
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = air_doctrine
+		}
+		]
+		
+		

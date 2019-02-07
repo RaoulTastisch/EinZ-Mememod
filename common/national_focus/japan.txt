@@ -1,0 +1,339 @@
+focus_tree = {
+	id = japan
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1200 }
+
+	focus = {
+		id = JAP_the_new_tenno
+		icon = GFX_focus_jap_pacific_guardian
+		x = 6
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		country_event = {
+		id = japan.20	
+		}
+		
+			
+		}
+	}
+	focus = {
+		id = JAP_share_the_rice
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		prerequisite = { focus = JAP_the_new_tenno }
+		x = 3
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		has_global_flag = share_the_rice
+		}
+        bypass = {
+		has_global_flag = share_the_rice
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {	
+		}
+		
+			
+		}
+
+	focus = {
+		id = JAP_the_rice_emporer
+		icon = GFX_focus_jap_spiritual_mobilization
+		prerequisite = { focus = JAP_the_new_tenno }
+		x = 9
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		has_global_flag = the_rice_emporer
+		}
+        bypass = {
+		has_global_flag = the_rice_emporer
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {	
+		}
+		
+			
+		}
+		focus = {
+		id = JAP_root_out_zaibatsus
+		icon = GFX_focus_jap_zaibatsu
+		prerequisite = { focus = JAP_the_rice_emporer }
+		x = 11
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+        bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+    		
+		}
+		
+			
+		}
+		focus = {
+		id = JAP_strenghten_the_emporer
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = JAP_the_rice_emporer }
+		x = 7
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+        bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+        add_political_power = 150		
+		}
+		
+			
+		}
+		focus = {
+		id = JAP_research_institute
+		icon = GFX_focus_research
+		x = 30
+		y = 3
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+        bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+	    }
+		completion_reward = {
+        country_event = {
+        id = japan.21		
+		}
+		}
+		
+			
+		}
+		focus = {
+		id = JAP_establish_personality_cult
+		prerequisite = { focus = JAP_root_out_zaibatsus }
+		prerequisite = { focus = JAP_strenghten_the_emporer }
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 9
+		y = 3
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+        bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+	    }
+		completion_reward = {
+        add_stability = 0.1
+		}
+		}
+		focus = {
+		id = JAP_finalize_centralization
+		prerequisite = { focus = JAP_establish_personality_cult }
+		icon = GFX_goal_generic_attack_allies
+		x = 9
+		y = 4
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+        bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+	    }
+		completion_reward = {
+        set_global_flag = finished_centralization
+		}
+		}
+		focus = {
+		id = JAP_our_place_in_the_world
+		icon = GFX_goal_generic_alliance
+		x = 20
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		has_global_flag = finished_centralization
+
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_political_power = 50	
+	    }
+		}
+		focus = {
+		id = JAP_align_with_manderscheid
+		icon = GFX_focus_ger_reichskommisariats
+		x = 16
+		y = 1
+        prerequisite = { focus = JAP_our_place_in_the_world}
+		cost = 1
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		has_government = fascism
+		GER = { has_government = fascism}
+		
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		completion_reward = {
+        add_opinion_modifier = {
+        target = GER
+        modifier = ger_jap_diplomacy_focus = {
+		value = 50
+	}
+}
+		}
+		
+		
+	}
+	
+			
+
+	
